@@ -1,0 +1,25 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "MS Emon"
+  description: "A research repository for data-driven and customer-centric frameworks."
+  site-url: "https://msemonlab.github.io/quarto-test/"
+  navbar: false
+  page-footer: false
+  search: false
+
+format:
+  html:
+    theme: none
+    css: assets/styles.css
+    include-before-body: _includes/header.html
+    include-after-body: _includes/footer.html
+    toc: false
+    page-layout: full
+    anchor-sections: false
+    smooth-scroll: true
+
+execute:
+  freeze: auto

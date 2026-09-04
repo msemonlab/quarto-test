@@ -1,0 +1,43 @@
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-brand"><a href="index.html">MS Emon</a></p>
+    <p class="footer-tagline">Strategy Analyst | Systems, Neuroscience &amp; E-commerce | Data-Driven &amp; Customer-Centric</p>
+    <hr class="footer-divider">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="https://www.researchgate.net/profile/Md-Salauddin-Emon" target="_blank" rel="noopener noreferrer">ResearchGate</a>
+    </div>
+    <hr class="footer-divider">
+    <p class="footer-copyright">© <span id="current-year"></span> MS Emon. All rights reserved.</p>
+  </div>
+</footer>
+<script>
+(function () {
+  var root = document.documentElement;
+  var themeButton = document.getElementById('theme-toggle');
+  var saved = localStorage.getItem('site-theme');
+  function apply(mode) {
+    var active = mode === 'light' || mode === 'dark' ? mode : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    root.setAttribute('data-theme', active);
+    if (themeButton) themeButton.setAttribute('data-mode', active);
+  }
+  apply(saved || 'system');
+  if (themeButton) themeButton.addEventListener('click', function () {
+    var next = themeButton.getAttribute('data-mode') === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('site-theme', next); apply(next);
+  });
+  var toggle = document.getElementById('menu-toggle');
+  var drawer = document.getElementById('nav-drawer');
+  var overlay = document.getElementById('nav-overlay');
+  var close = document.getElementById('drawer-close');
+  function openMenu() { drawer.classList.add('open'); overlay.classList.add('visible'); drawer.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; }
+  function closeMenu() { drawer.classList.remove('open'); overlay.classList.remove('visible'); drawer.setAttribute('aria-hidden', 'true'); document.body.style.overflow = ''; }
+  if (toggle) toggle.addEventListener('click', openMenu);
+  if (close) close.addEventListener('click', closeMenu);
+  if (overlay) overlay.addEventListener('click', closeMenu);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
+  var year = document.getElementById('current-year'); if (year) year.textContent = new Date().getFullYear();
+}());
+</script>
