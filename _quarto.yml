@@ -7,7 +7,6 @@ website:
   description: "A research repository for data-driven and customer-centric frameworks."
   site-url: "https://msemonlab.github.io/quarto-test/"
   navbar: false
-  page-footer: false
   search: false
 
 format:
