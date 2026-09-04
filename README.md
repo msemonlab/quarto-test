@@ -25,3 +25,5 @@ The generated site will be placed in `_site/`.
 ## Current limitation
 
 The Jekyll source contained Liquid-based post loops. Since the repository currently has no research or article posts, this first conversion keeps those sections static and ready for future content. A later content-model decision is needed before implementing Quarto listings, RSS, search indexing, or legacy URL redirects.
+
+Preview workflow trigger: this repository is configured to render and deploy through GitHub Actions when `main` changes.
