@@ -5,6 +5,7 @@ format:
     page-layout: full
 ---
 
+::: {=html}
 <section class="home-status">
   <p class="eyebrow">PRIMARY OBSERVATION FIELD</p>
   <h2>Operational Status</h2>
@@ -24,3 +25,4 @@ format:
   <h2>About the Repository</h2>
   <p>A curated repository of MS Emon's research direction, systems thinking, and customer-centric analytical frameworks.</p>
 </section>
+:::

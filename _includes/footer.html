@@ -23,7 +23,7 @@
     root.setAttribute('data-theme', active);
     if (themeButton) themeButton.setAttribute('data-mode', active);
   }
-  apply(saved || 'system');
+  apply(saved || 'dark');
   if (themeButton) themeButton.addEventListener('click', function () {
     var next = themeButton.getAttribute('data-mode') === 'dark' ? 'light' : 'dark';
     localStorage.setItem('site-theme', next); apply(next);
