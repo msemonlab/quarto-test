@@ -19,7 +19,6 @@ format:
     page-layout: custom
     anchor-sections: false
     smooth-scroll: true
-    minimal: true
     title-block-style: none
 
 execute:
