@@ -2,9 +2,19 @@
 title: "Research"
 ---
 
+::: {=html}
+<div class="single-post-area">
+<div class="post-body">
+:::
+
 <section class="article-card">
   <p class="card-kicker">RESEARCH ARCHIVE</p>
   <h1>Research</h1>
   <p>This section will collect research publications, analytical deep-dives, and structured research notes.</p>
   <p class="search-status">The research archive is currently initializing. Future Quarto documents can be added to this project and linked here.</p>
 </section>
+
+::: {=html}
+</div>
+</div>
+:::
