@@ -1,11 +1,9 @@
 ---
-title: "Analytics"
+title: false
 ---
 
-::: {=html}
 <div class="single-post-area">
 <div class="post-body">
-:::
 
 <section class="article-card">
   <p class="card-kicker">ANALYTICAL ARCHIVE</p>
@@ -15,7 +13,5 @@ title: "Analytics"
   <p class="search-status">The analytics archive is currently initializing. Future Quarto documents can be added as standalone pages or computational notebooks.</p>
 </section>
 
-::: {=html}
 </div>
 </div>
-:::
