@@ -687,3 +687,43 @@
 .quarto-title {
   display: none !important;
 }
+
+
+/* Explicit About the Repository Card Typography - Parity with Jekyll */
+.sidebar-widget h2,
+.sidebar-widget h3 {
+  font-family: var(--font) !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.8px !important;
+  color: var(--text-main) !important;
+  border-bottom: none !important;
+  padding-bottom: 14px !important;
+  margin-top: 0 !important;
+  margin-bottom: 14px !important;
+  position: relative !important;
+}
+
+.sidebar-widget h2::after,
+.sidebar-widget h3::after {
+  content: '' !important;
+  position: absolute !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  width: 72px !important;
+  height: 3px !important;
+  border-radius: 99px !important;
+  background: var(--hero-gradient) !important;
+  box-shadow: 0 0 12px var(--edge-glow) !important;
+}
+
+.sidebar-widget .about-text,
+.sidebar-widget .widget-content,
+.sidebar-widget p {
+  font-family: var(--font) !important;
+  font-size: 14px !important;
+  color: var(--text-muted) !important;
+  line-height: 1.7 !important;
+  margin: 0 !important;
+}
