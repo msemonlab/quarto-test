@@ -16,9 +16,11 @@ format:
     include-before-body: _includes/header.html
     include-after-body: _includes/footer.html
     toc: false
-    page-layout: full
+    page-layout: custom
     anchor-sections: false
     smooth-scroll: true
+    minimal: true
+    title-block-style: none
 
 execute:
   freeze: auto
