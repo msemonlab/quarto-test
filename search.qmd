@@ -1,11 +1,9 @@
 ---
-title: "Search"
+title: false
 ---
 
-::: {=html}
 <div class="single-post-area">
 <div class="post-body">
-:::
 
 <section class="article-card">
   <p class="card-kicker">REPOSITORY SEARCH</p>
@@ -20,7 +18,5 @@ title: "Search"
   <div id="search-results" aria-live="polite"><p class="search-status">Search is ready for future content.</p></div>
 </section>
 
-::: {=html}
 </div>
 </div>
-:::
