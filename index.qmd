@@ -6,6 +6,7 @@ format:
 ---
 
 ::: {=html}
+<div class="home-content">
 <section class="home-status">
   <p class="eyebrow">PRIMARY OBSERVATION FIELD</p>
   <h2>Operational Status</h2>
@@ -13,16 +14,11 @@ format:
     <h3>Strategic Research Synthesis</h3>
     <p>The <strong>Repository</strong> is currently in initialization stage.</p>
     <div class="focus-panel">
-      <span>Current focus:</span>
-      <p>Foundational ResearchGate Publication — <em>In Progress</em></p>
+      <span>Current Focus:</span>
+      <p>Foundational ResearchGate Publication &mdash; <em>In Progress</em></p>
     </div>
     <p class="status-note">System status: Calibrating for data-driven and customer-centric frameworks.</p>
   </div>
 </section>
-
-<section class="article-card about-home">
-  <p class="card-kicker">REPOSITORY PROFILE</p>
-  <h2>About the Repository</h2>
-  <p>A curated repository of MS Emon's research direction, systems thinking, and customer-centric analytical frameworks.</p>
-</section>
+</div>
 :::
