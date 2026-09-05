@@ -65,7 +65,7 @@
       --glass-highlight: rgba(255,255,255,0.06);
     }
     .site-header { background-color: #1E293B; border-bottom-color: #2D3748; }
-    .header-logo h1 a { color: #93C5FD; }
+    .header-logo h1 a, .header-logo .site-title a { color: #93C5FD; }
     .main-nav ul li a { color: #E2E8F0; }
     .main-nav ul li a:hover { background: #2D3748; color: #93C5FD; }
     .header-search input[type="text"] { background: var(--code-bg); color: var(--code-text); border-color: #2D3748; }
@@ -145,7 +145,7 @@
   body::before { content:''; position:fixed; inset:0; pointer-events:none; z-index:-1; opacity:.75; background-image:linear-gradient(120deg, transparent 0%, var(--glass-highlight) 48%, transparent 100%); background-size:180% 180%; animation:ambientSweep 18s ease-in-out infinite alternate; }
   @keyframes ambientSweep { from { background-position:0% 0%; } to { background-position:100% 100%; } }
   .site-header { background:linear-gradient(135deg, var(--bg-card), var(--bg-body)); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); }
-  .header-logo h1 a { text-shadow:0 0 24px var(--ambient-blue); }
+  .header-logo h1 a, .header-logo .site-title a { text-shadow:0 0 24px var(--ambient-blue); }
   .site-body { position:relative; }
   .article-card, .single-post-area, .sidebar-widget, .comments-section, .status-card { border-color:color-mix(in srgb, var(--border-color) 78%, var(--light-blue)); box-shadow:var(--shadow-sm), 0 0 0 1px rgba(255,255,255,0.02); }
   .article-card:hover, .sidebar-widget:hover, .status-card:hover { box-shadow:var(--shadow-md), 0 0 28px var(--ambient-blue); }
@@ -201,8 +201,8 @@
   .site-header.scrolled { box-shadow: var(--shadow-md); }
   .header-inner { display: flex; justify-content: space-between; align-items: center; padding: 14px 24px; gap: 20px; }
   
-  .header-logo h1 { margin: 0; font-size: 24px; letter-spacing: -0.5px; line-height: 1.1; }
-  .header-logo h1 a { color: var(--primary-blue); text-decoration: none; }
+  .header-logo h1, .header-logo .site-title { margin: 0; font-size: 24px; letter-spacing: -0.5px; line-height: 1.1; }
+  .header-logo h1 a, .header-logo .site-title a { color: var(--primary-blue); text-decoration: none; }
   .header-logo p { margin: 2px 0 0; font-size: 12px; color: var(--text-muted); font-weight: 500; }
   .header-logo img { max-height: 56px; width: auto; }
 
@@ -275,7 +275,7 @@
   .header-search .btn-primary { border-radius: 0 var(--radius) var(--radius) 0; padding: 9px 18px; }
 
   /*=============================================================================
-    5. Main Layout — Two-Column
+    5. Main Layout ï¿½ Two-Column
   =============================================================================*/
   .site-body { display: flex; gap: 51px; padding: 36px 24px; max-width: var(--container); margin: 0 auto; }
   .main-content { flex: 0 0 816px; min-width: 0; }
@@ -446,7 +446,7 @@
   }
   .site-header::after { content:''; position:absolute; left:0; right:0; bottom:-1px; height:2px; background:var(--hero-gradient); opacity:.92; box-shadow:0 0 18px var(--edge-glow); }
   .header-inner { min-height:78px; }
-  .header-logo h1 a { letter-spacing:-1.6px; text-shadow:0 0 18px var(--edge-glow), 0 3px 12px rgba(0,0,0,.18); }
+  .header-logo h1 a, .header-logo .site-title a { letter-spacing:-1.6px; text-shadow:0 0 18px var(--edge-glow), 0 3px 12px rgba(0,0,0,.18); }
   .header-logo p { opacity:.82; letter-spacing:.2px; }
   .main-nav ul li a, .theme-toggle, .menu-toggle { transition:transform .3s cubic-bezier(.22,1,.36,1), color var(--transition), background var(--transition), border-color var(--transition), box-shadow var(--transition); }
   .main-nav ul li a:hover { transform:translateY(-3px); box-shadow:0 8px 18px var(--immersion-indigo); }
@@ -496,7 +496,7 @@
   }
 
   /* Final visual corrections: preserve logo contrast and rounded status-card geometry. */
-  .header-logo h1 a { color:var(--light-blue) !important; opacity:1 !important; text-shadow:0 0 1px currentColor, 0 0 22px var(--edge-glow), 0 3px 12px rgba(0,0,0,.24); }
+  .header-logo h1 a, .header-logo .site-title a { color:var(--light-blue) !important; opacity:1 !important; text-shadow:0 0 1px currentColor, 0 0 22px var(--edge-glow), 0 3px 12px rgba(0,0,0,.24); }
   .status-card { border:1px solid var(--edge-glow) !important; border-top:4px solid var(--light-blue) !important; border-image:none !important; border-radius:var(--radius) !important; overflow:hidden !important; }
   /*=============================================================================
     13. Paradigm Shift: Research Instrument Interface
@@ -535,9 +535,9 @@
   .header-logo { position:relative; display:flex; flex-direction:column; align-items:flex-start; }
   .header-logo::before { content:none; display:none; }
   .header-repository-label { display:block; width:auto; margin:2px 0 3px; color:var(--accent-teal); font-size:clamp(8px,.9vw,10px); font-weight:700; line-height:1.15; letter-spacing:clamp(1px,.12vw,1.4px); text-transform:uppercase; opacity:.86; }
-  .header-logo h1 { order:1; }
+  .header-logo h1, .header-logo .site-title { order:1; }
   .header-logo p { order:3; }
-  .header-logo h1 a { color:var(--instrument-ink) !important; font-size:clamp(26px,3vw,38px); font-weight:800; letter-spacing:-2px; text-shadow:0 0 24px var(--instrument-hot); }
+  .header-logo h1 a, .header-logo .site-title a { color:var(--instrument-ink) !important; font-size:clamp(26px,3vw,38px); font-weight:800; letter-spacing:-2px; text-shadow:0 0 24px var(--instrument-hot); }
   .header-logo p { max-width:340px; }
   .header-right { align-items:center; }
   .main-nav ul li a { border:1px solid transparent; letter-spacing:.3px; }
@@ -575,7 +575,7 @@
     .site-header::before { left:16px; right:16px; }
     .header-inner { min-height:78px; }
     .header-logo::before { font-size:8px; letter-spacing:1.8px; }
-    .header-logo h1 a { font-size:27px; letter-spacing:-1.4px; }
+    .header-logo h1 a, .header-logo .site-title a { font-size:27px; letter-spacing:-1.4px; }
     .site-body { padding-top:52px; padding-bottom:64px; }
     .site-body::after { right:4px; top:62px; font-size:8px; }
     #main-section::before { margin-bottom:14px; }
@@ -604,11 +604,11 @@
   .site-header::before { height:2px; opacity:.72; box-shadow:0 0 12px var(--instrument-hot); }
   .site-header::after { height:1px; opacity:.32; background:linear-gradient(90deg, transparent, var(--instrument-hot), transparent); box-shadow:none; }
   .header-inner { min-height:82px; }
-  .header-logo h1 a { text-shadow:0 0 16px var(--instrument-hot), 0 2px 8px rgba(0,0,0,.12); }
+  .header-logo h1 a, .header-logo .site-title a { text-shadow:0 0 16px var(--instrument-hot), 0 2px 8px rgba(0,0,0,.12); }
   .header-right { background:transparent; }
   @media screen and (max-width:768px) { .header-inner { min-height:74px; } }
   /* Headline clarity: retain atmosphere with a tight, restrained glow. */
-  .header-logo h1 a { text-shadow:0 0 5px rgba(0,163,224,.18), 0 1px 2px rgba(0,0,0,.08) !important; -webkit-font-smoothing:antialiased; }
+  .header-logo h1 a, .header-logo .site-title a { text-shadow:0 0 5px rgba(0,163,224,.18), 0 1px 2px rgba(0,0,0,.08) !important; -webkit-font-smoothing:antialiased; }
   /* Search panel gradient correction: preserve shape, remove lower-corner tonal buildup. */
   .nav-drawer { background:var(--bg-card) !important; background-image:none !important; box-shadow:0 12px 28px rgba(15,23,42,.14), 0 0 0 1px var(--instrument-line) !important; }
   .drawer-search { background:transparent !important; }
@@ -637,7 +637,7 @@
     .main-nav { display: none; }
     .header-right { gap: 18px; }
   }
-  .header-logo h1 { font-size: 22px; letter-spacing: -0.8px; }
+  .header-logo h1, .header-logo .site-title { font-size: 22px; letter-spacing: -0.8px; }
   .header-logo p, .header-repository-label { font-size: 10px; letter-spacing: 1.4px; }
   .home-status { margin-bottom: 52px; }
   .home-status .status-card h2 { border-bottom: none; padding-bottom: 0; margin-bottom: 28px; font-size: 23px; }
@@ -646,14 +646,14 @@
   .home-status .status-card .status-note { margin-top: 22px; }
   .site-footer { padding-top: 64px; padding-bottom: 64px; }
   @media screen and (max-width: 768px) {
-    .header-logo h1 { font-size: 25px; }
+    .header-logo h1, .header-logo .site-title { font-size: 25px; }
     .home-status { margin-bottom: 36px; }
   }
   /* Mobile parity refinement: match Blogger status scale and logo lockup. */
   .header-logo p { display: block; max-width: 100%; overflow: hidden; white-space: nowrap; text-overflow: clip; font-size: 9px; letter-spacing: 1.15px; line-height: 1.15; }
   @media screen and (max-width: 768px) {
     .header-logo { min-width: 0; }
-    .header-logo h1 a { font-size: 25px; letter-spacing: -1.5px; }
+    .header-logo h1 a, .header-logo .site-title a { font-size: 25px; letter-spacing: -1.5px; }
     .header-logo p { width: 100%; font-size: 9px; letter-spacing: 1.1px; }
     .home-status { margin-bottom: 30px; }
     .home-status > .eyebrow { margin-bottom: 14px; font-size: 9px; letter-spacing: 2.3px; }
@@ -670,9 +670,18 @@
   .home-status > h2 { margin: 0 0 8px; color: var(--status-heading); font-size: 23px; line-height: 1.25; }
   .home-status .status-card { background-image: linear-gradient(145deg, var(--status-bg), var(--status-detail-bg)) !important; box-shadow: 0 18px 42px rgba(0,0,0,.18), 0 0 0 1px var(--instrument-line), inset 0 1px 0 var(--glass-highlight); }
   @media screen and (max-width: 768px) {
-    .header-logo h1 a { font-size: 30px; letter-spacing: -1.8px; }
+    .header-logo h1 a, .header-logo .site-title a { font-size: 30px; letter-spacing: -1.8px; }
     .header-logo p { width: max-content; max-width: none; overflow: visible; font-size: 10px; letter-spacing: 1.55px; transform: scaleX(.76); transform-origin: left center; }
     .home-status > h2 { margin-bottom: 8px; font-size: 21px; }
     .home-status .status-card { padding: 26px 20px 28px; }
     .home-status .status-card h3 { margin-bottom: 16px; font-size: clamp(24px, 7vw, 30px); }
   }
+
+
+/* Hide Quarto-generated title block headers */
+#title-block-header,
+.quarto-title-block,
+#quarto-document-content > header,
+.quarto-title {
+  display: none !important;
+}
