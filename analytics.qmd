@@ -1,17 +1,15 @@
 ---
-title: false
+title: "Analytics"
 ---
 
 <div class="single-post-area">
 <div class="post-body">
-
 <section class="article-card">
-  <p class="card-kicker">ANALYTICAL ARCHIVE</p>
-  <h1>Analytics</h1>
-  <p>This section will present data-driven analyses, decision frameworks, visual explanations, and analytical experiments.</p>
-  <p>Planned themes include customer-centric systems, e-commerce scalability, measurable operating frameworks, and the relationship between human cognition and decision quality.</p>
-  <p class="search-status">The analytics archive is currently initializing. Future Quarto documents can be added as standalone pages or computational notebooks.</p>
+<p class="card-kicker">ANALYTICAL ARCHIVE</p>
+<h1>Analytics</h1>
+<p>This section will present data-driven analyses, decision frameworks, visual explanations, and analytical experiments.</p>
+<p>Planned themes include customer-centric systems, e-commerce scalability, measurable operating frameworks, and the relationship between human cognition and decision quality.</p>
+<p class="search-status">The analytics archive is currently initializing. Future Quarto documents can be added as standalone pages or computational notebooks.</p>
 </section>
-
 </div>
 </div>
