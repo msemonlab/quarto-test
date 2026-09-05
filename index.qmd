@@ -1,11 +1,7 @@
 ---
-title: ""
-format:
-  html:
-    page-layout: full
+title: false
 ---
 
-::: {=html}
 <div class="home-content">
 <section class="home-status">
   <p class="eyebrow">PRIMARY OBSERVATION FIELD</p>
@@ -21,4 +17,3 @@ format:
   </div>
 </section>
 </div>
-:::
